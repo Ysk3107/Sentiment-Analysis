@@ -22,8 +22,8 @@ TORCH_CACHE_DIR = config("TORCH_CACHE_DIR", '')
 os.environ['TORCH_HOME'] = TORCH_CACHE_DIR
 
 # Importing pre-trained model for Sentiment Analysis.
-SENTIMENT_MODEL = "cardiffnlp/twitter-roberta-base-sentiment-latest"
-
+# SENTIMENT_MODEL = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+SENTIMENT_MODEL = "distilbert-base-uncased-finetuned-sst-2-english"
 # Model Training for Polarity Scores.
 tokenizer = AutoTokenizer.from_pretrained(
     SENTIMENT_MODEL, cache_dir=HUGGINGFACE_CACHE_DIR)
